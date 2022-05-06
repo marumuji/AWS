@@ -1,0 +1,9 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "test-sam-app"
+s3_bucket = "sam-test-372117823661"
+s3_prefix = "test-samp-app"
+region = "ap-northeast-1"
+capabilities = "CAPABILITY_IAM"
