@@ -1,8 +1,15 @@
 exports.handler = async (event) => {
-  return JSON.stringify(event.body);
+  return {
+    "statusCode": 201,
+    "headers": {
+      "Content-Type": "text/plain",
+      "My-Custom-Header": "Custom Value"
+    },
+    "body": JSON.stringify({
+      "message": "Hello, world!"
+    }),
+    "isBase64Encoded": false
+  };
 };
 
-// curl -X POST \
-// -H 'Content-Type: application/json' \
-// -d '{ "example": "test" }' \
-// ${FUNCTION_URL} 
+// curl -i ${FUNCTION_URL} 
