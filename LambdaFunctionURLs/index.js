@@ -1,3 +1,3 @@
 exports.handler = async (event) => {
-  return 'Hello, World!!';
+  return JSON.stringify(event.queryStringParameters);
 };
