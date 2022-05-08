@@ -1,5 +1,8 @@
 exports.handler = async (event) => {
-  return JSON.stringify(event.queryStringParameters);
+  return JSON.stringify(event.body);
 };
 
-// curl "${FUNCTION_URL}?key1=value1&key2=value2&key3=value3"
+// curl -X POST \
+// -H 'Content-Type: application/json' \
+// -d '{ "example": "test" }' \
+// ${FUNCTION_URL} 
