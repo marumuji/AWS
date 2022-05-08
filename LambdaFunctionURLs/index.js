@@ -8,6 +8,10 @@ exports.handler = async (event) => {
     "body": JSON.stringify({
       "message": "Hello, world!"
     }),
+    "cookies": [
+      "Cookie_1=Value1; Expires=9 May 2022 20:08 GMT",
+      "Cookie_2=Value2; Max-Age=78000"
+    ],
     "isBase64Encoded": false
   };
 };
